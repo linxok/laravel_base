@@ -21,7 +21,7 @@
                 <select class="form-select" id="category" name="category_id">
                     @foreach($categories as $category)
                         <option
-                            {{ $category->id == $post->category->id ? 'selected': '' }}
+                            {{ $category->id == $post->category_id ? 'selected': '' }}
                             value="{{ $category->id}}">{{ $category->title }}</option>
                     @endforeach
                 </select>

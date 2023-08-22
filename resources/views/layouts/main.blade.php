@@ -27,6 +27,11 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('contact.index')}}">Contact</a>
                         </li>
+                        @can('view', auth()->user())
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{route('admin.post.index')}}">Admin</a>
+                            </li>
+                        @endcan
                     </ul>
                 </div>
             </div>

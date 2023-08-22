@@ -11,11 +11,11 @@ class Service
         $tags =$data['tags'];
         unset($data['tags']);
 
-
         $post = Post::create($data);
         $post->tags()->attach($tags);
 
 
+        return $post;
 //        foreach ($tags as $tag){
 //            PostTag::firsOrCreate([
 //               'tag_id' => $tag,
